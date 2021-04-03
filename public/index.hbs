@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact <form action=""></form></title>
+    <link rel="stylesheet" href="../public/css/main.css" />
+</head>
+<body>
+
+
+     <br><br><br>
+     <section class="container">
+        {{msg}}
+        <form action="send" method="POST" id="form" class="form">
+            <div class="form-control">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" id="client" placeholder="Your name">
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="email" placeholder="Your email">
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <!-- <label for="message">Message</label> -->
+                <textarea name="message" id="text-message"  rows="7" placeholder="Say something about your project"></textarea>
+                <small>Error message</small>
+            </div>
+            <button class="submit-btn" type="submit">Send message</button>
+            
+        </form>
+    </section>
+
+    
+      
+      <script src="validation.js"></script>
+      <script src="../server.js"></script>
+</body>
+</html>
