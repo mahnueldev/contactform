@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.render(_dirname + '../contact.hbs');
+  res.render('index');
 });
 
 app.post('/send', (req, res) => {
@@ -66,7 +66,7 @@ app.post('/send', (req, res) => {
       console.log('Message sent: %s', info.messageId);   
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-      res.render('contact', {msg:'Email has been sent'});
+      res.render('index', {msg:'Email has been sent'});
   });
   });
 
